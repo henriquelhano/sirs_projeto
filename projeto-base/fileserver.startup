@@ -1,5 +1,5 @@
-ifconfig eth0 1.2.4.55/24 up
-route add default gw 1.2.4.254
+ifconfig eth0 3.2.4.55/24 up
+route add default gw 3.2.4.254
 
 
 
