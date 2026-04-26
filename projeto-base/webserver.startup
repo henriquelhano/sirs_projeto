@@ -1,2 +1,2 @@
 ifconfig eth0 7.4.3.2/24 up
-route add default gw 5.4.3.254
+route add default gw 7.4.3.254
