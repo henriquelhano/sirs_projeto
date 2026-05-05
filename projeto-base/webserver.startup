@@ -1,2 +1,15 @@
 ifconfig eth0 7.4.3.2/24 up
 route add default gw 7.4.3.254
+
+mkdir -p /var/www/html
+cat > /var/www/html/index.html << 'HTML'
+<html>
+<head><title>RedVector</title></head>
+<body>
+<h1>RedVector</h1>
+<p>Specialized in AI-powered pentesting software.</p>
+</body>
+</html>
+HTML
+
+service apache2 start
