@@ -1,4 +1,4 @@
 ifconfig eth0 3.2.5.1/24 up
 route add default gw 3.2.5.254
 
-nc -l -p 40002
+nc -l -p 40002 &
