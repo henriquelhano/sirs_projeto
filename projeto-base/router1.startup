@@ -28,11 +28,11 @@ EOF
 
 ./easyrsa init-pki
 ./easyrsa build-ca nopass
-./easyrsa gen-req router1 nopass
+./easyrsa --req-cn="router1" gen-req router1 nopass
 ./easyrsa sign-req server router1
-./easyrsa gen-req ana nopass
+./easyrsa --req-cn="ana" gen-req ana nopass
 ./easyrsa sign-req client ana
-./easyrsa gen-req bento nopass
+./easyrsa --req-cn="bento" gen-req bento nopass
 ./easyrsa sign-req client bento
 ./easyrsa gen-dh
 openvpn --genkey --secret /etc/openvpn/easy-rsa/pki/ta.key
