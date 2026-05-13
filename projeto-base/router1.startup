@@ -9,47 +9,4 @@ ip route add 0.0.0.0/0 via 6.6.6.2
 
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
-cp -r /usr/share/easy-rsa /etc/openvpn/easy-rsa
-cd /etc/openvpn/easy-rsa
-
-cat > vars << 'EOF'
-set_var EASYRSA_REQ_COUNTRY    "PT"
-set_var EASYRSA_REQ_PROVINCE   "Lisboa"
-set_var EASYRSA_REQ_CITY       "Oeiras"
-set_var EASYRSA_REQ_ORG        "RedVector"
-set_var EASYRSA_REQ_EMAIL      "geral@redvector.pt"
-set_var EASYRSA_REQ_OU         "IT"
-set_var EASYRSA_ALGO           "rsa"
-set_var EASYRSA_KEY_SIZE       2048
-set_var EASYRSA_CA_EXPIRE      3650
-set_var EASYRSA_CERT_EXPIRE    825
-set_var EASYRSA_BATCH          "yes"
-EOF
-
-./easyrsa init-pki
-./easyrsa build-ca nopass
-./easyrsa --req-cn="router1" gen-req router1 nopass
-./easyrsa sign-req server router1
-./easyrsa --req-cn="ana" gen-req ana nopass
-./easyrsa sign-req client ana
-./easyrsa --req-cn="bento" gen-req bento nopass
-./easyrsa sign-req client bento
-./easyrsa gen-dh
-openvpn --genkey --secret /etc/openvpn/easy-rsa/pki/ta.key
-
-sleep 5
-
-cp /etc/openvpn/easy-rsa/pki/ca.crt /shared/
-cp /etc/openvpn/easy-rsa/pki/issued/ana.crt /shared/
-cp /etc/openvpn/easy-rsa/pki/private/ana.key /shared/
-cp /etc/openvpn/easy-rsa/pki/issued/bento.crt /shared/
-cp /etc/openvpn/easy-rsa/pki/private/bento.key /shared/
-cp /etc/openvpn/easy-rsa/pki/ta.key /shared/
-
-cp /etc/openvpn/easy-rsa/pki/ca.crt /etc/openvpn/
-cp /etc/openvpn/easy-rsa/pki/issued/router1.crt /etc/openvpn/
-cp /etc/openvpn/easy-rsa/pki/private/router1.key /etc/openvpn/
-cp /etc/openvpn/easy-rsa/pki/dh.pem /etc/openvpn/
-cp /etc/openvpn/easy-rsa/pki/ta.key /etc/openvpn/
-
 openvpn --config /etc/openvpn/server.conf --daemon

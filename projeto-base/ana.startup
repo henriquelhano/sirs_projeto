@@ -6,13 +6,4 @@ ifconfig eth0 6.6.6.100/24 up
 ip route add 3.2.0.0/20 via 6.6.6.1
 ip route add 7.4.3.0/24 via 6.6.6.2
 
-while [ ! -f /shared/ca.crt ] || [ ! -f /shared/ana.crt ] || [ ! -f /shared/ana.key ] || [ ! -f /shared/ta.key ]; do
-    sleep 2
-done
-
-cp /shared/ca.crt /etc/openvpn/
-cp /shared/ana.crt /etc/openvpn/
-cp /shared/ana.key /etc/openvpn/
-cp /shared/ta.key /etc/openvpn/
-
 openvpn --config /etc/openvpn/client-ana.conf --daemon
