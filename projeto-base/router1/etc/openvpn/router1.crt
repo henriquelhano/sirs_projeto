@@ -2,46 +2,45 @@ Certificate:
     Data:
         Version: 3 (0x2)
         Serial Number:
-            09:50:a5:3e:20:0f:9f:e3:c4:bf:4d:a8:74:6d:82:87
+            91:69:bb:27:bb:80:d1:dd:45:6a:8a:d9:32:2d:b4:4f
         Signature Algorithm: sha256WithRSAEncryption
-        Issuer: CN=ChangeMe
+        Issuer: CN=Easy-RSA CA
         Validity
-            Not Before: May 13 11:54:57 2026 GMT
-            Not After : Aug 15 11:54:57 2028 GMT
+            Not Before: May 20 14:13:13 2026 GMT
+            Not After : Aug 22 14:13:13 2028 GMT
         Subject: CN=router1
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
-                RSA Public-Key: (2048 bit)
+                Public-Key: (2048 bit)
                 Modulus:
-                    00:f7:aa:b3:ab:39:c5:1c:fa:bb:f7:53:4d:6a:85:
-                    7b:cd:fe:dc:c2:49:74:5d:f8:54:83:12:d7:94:9e:
-                    28:64:cf:4a:9a:e2:9c:dc:79:24:28:37:5c:3c:09:
-                    83:db:df:e0:f5:c2:5e:65:4e:2e:9c:81:98:16:32:
-                    0e:14:42:01:15:31:db:53:68:3f:40:57:47:04:5d:
-                    6e:29:84:6f:29:81:7d:a5:a6:f5:f5:19:5b:0a:e8:
-                    c7:c6:f2:c0:ac:44:ca:d4:69:24:ff:d2:47:c5:a1:
-                    54:95:ad:38:7f:72:13:92:f3:d2:ac:f9:19:b6:17:
-                    c9:a9:60:a0:c2:30:67:cb:51:18:0d:bc:e3:cc:38:
-                    af:fa:16:be:ed:8d:16:93:3e:d4:13:e9:a2:b8:c7:
-                    2d:d5:eb:29:27:36:02:d6:40:d1:60:3b:c2:17:48:
-                    cd:eb:ec:cf:1c:5a:d9:17:d2:05:68:2b:e8:f1:35:
-                    c5:37:da:1f:98:8c:cf:a0:89:74:6c:6d:c2:bc:4e:
-                    75:ed:e1:9c:11:8f:e9:79:82:21:80:81:88:bc:0e:
-                    88:31:8e:49:d9:a2:ce:90:04:b5:f3:22:71:2f:1b:
-                    05:c0:51:73:f8:19:dc:48:d6:e4:d6:02:df:c2:6d:
-                    01:b2:d7:83:e0:dc:63:04:a9:ea:64:67:74:b6:0b:
-                    79:8d
+                    00:ce:38:90:99:24:15:95:bf:d0:cc:09:97:90:ce:
+                    37:14:54:2b:5c:b5:62:8d:5b:1f:d1:a8:f1:69:7d:
+                    5d:76:98:fd:0d:7e:1f:e0:28:28:40:35:8c:8e:44:
+                    40:05:0e:e3:7e:38:50:f0:b1:c7:48:00:e9:7f:af:
+                    ef:ae:3e:72:28:be:19:d0:d7:94:7f:58:56:64:14:
+                    16:82:09:28:89:08:c2:30:e6:62:3c:9c:59:8a:9f:
+                    b6:07:55:35:a9:ac:4f:48:71:24:e2:60:e9:c8:81:
+                    46:8b:a0:06:95:51:cb:dd:4e:11:7c:6f:35:05:7d:
+                    f0:1d:ef:67:81:e4:90:78:f7:cc:ad:ee:11:45:fd:
+                    38:08:e7:8a:48:2c:c4:d7:ce:14:f5:55:a6:19:45:
+                    cf:8d:1f:1b:15:d6:38:a1:f3:d2:12:a1:ed:ed:76:
+                    dd:15:45:1a:11:3d:9d:a6:f8:cb:a4:34:c4:99:67:
+                    19:42:0f:e8:9d:62:60:ce:dc:02:3c:fb:6a:82:7e:
+                    a1:92:0c:dd:09:d2:82:e7:e4:aa:59:07:47:5f:fb:
+                    21:88:0f:a4:9a:ec:4b:75:fc:33:78:7b:4b:cd:c3:
+                    18:c8:19:03:bc:10:26:71:93:d9:a1:e7:b6:7d:05:
+                    76:b9:d5:15:b0:1d:05:06:10:21:24:7b:1f:46:e1:
+                    81:f9
                 Exponent: 65537 (0x10001)
         X509v3 extensions:
             X509v3 Basic Constraints: 
                 CA:FALSE
             X509v3 Subject Key Identifier: 
-                1F:4D:9C:64:E5:44:1B:63:83:F0:FE:D7:8F:01:C8:07:02:A1:5D:90
+                09:83:07:54:C7:5C:65:36:5F:92:09:48:DA:D0:84:44:17:F3:31:A3
             X509v3 Authority Key Identifier: 
-                keyid:02:14:7E:05:56:88:93:88:45:E6:5B:FC:BF:AF:B7:6A:2C:A5:E6:33
-                DirName:/CN=ChangeMe
-                serial:25:1F:4D:5F:AD:E3:EE:F3:DF:AB:D4:BC:DC:3E:D3:3F:A4:3B:42:8E
-
+                keyid:DE:AC:11:0C:DE:BA:5D:6B:1E:C7:6E:D3:6F:45:5B:6C:75:61:02:A7
+                DirName:/CN=Easy-RSA CA
+                serial:22:D0:72:39:F1:46:25:9B:CC:7B:2E:73:30:8D:22:38:85:06:5A:CC
             X509v3 Extended Key Usage: 
                 TLS Web Server Authentication
             X509v3 Key Usage: 
@@ -49,39 +48,40 @@ Certificate:
             X509v3 Subject Alternative Name: 
                 DNS:router1
     Signature Algorithm: sha256WithRSAEncryption
-         91:92:b1:e6:c6:b7:cf:85:4d:53:5b:48:9c:f7:91:fe:c3:a6:
-         92:06:a9:fd:52:e4:48:3d:6c:74:79:3d:bc:14:75:38:07:f5:
-         be:70:2e:b3:36:cf:89:d7:ab:09:15:8e:ed:a0:b3:b9:4e:1e:
-         27:46:b0:08:86:4b:73:fd:b5:d6:ea:66:80:fa:99:47:ec:cd:
-         ec:59:42:78:04:e0:18:8f:3b:ed:53:84:f8:2a:c5:8d:2c:7c:
-         44:e1:45:07:51:6c:33:e4:9f:96:e8:35:c4:12:6d:08:cc:13:
-         40:3a:81:6a:23:a1:0f:d3:aa:02:5a:b9:e3:12:c7:bd:1e:90:
-         de:4f:bb:09:82:43:fe:37:ca:b3:29:0c:cf:a8:76:bb:0d:18:
-         e0:80:8f:eb:4b:32:f3:c2:fa:19:97:c0:30:5d:b6:1d:00:fe:
-         78:51:60:29:ef:dc:04:6f:95:f0:9e:78:bc:0e:49:9e:21:c8:
-         9d:2d:01:e6:7d:6f:06:e7:5c:08:42:c3:e5:50:d5:e2:0b:4a:
-         43:56:1c:43:8f:01:9e:09:69:73:18:6f:29:5b:67:b9:01:1e:
-         09:27:4a:16:ca:b5:4a:41:cd:88:f1:ca:9a:0e:f9:35:81:60:
-         ed:f6:a5:4d:74:a1:d8:af:5d:dd:46:84:03:29:69:39:e1:79:
-         55:b1:87:13
+    Signature Value:
+        80:3f:f9:5e:8f:26:f3:0e:1a:c8:f4:e4:7e:78:3d:e7:9e:e7:
+        95:f0:49:98:31:a6:cd:68:d5:9c:21:20:43:38:35:33:f1:cb:
+        ff:cc:01:4d:d2:d8:1c:69:e0:8e:b8:0c:ff:3c:f2:cb:86:0a:
+        65:51:c8:42:06:dc:27:d6:2c:1a:d2:fd:98:25:d9:24:b2:69:
+        bc:67:11:8c:36:e3:8a:db:2b:ea:b3:62:aa:78:7f:71:52:88:
+        54:1c:bf:6a:3d:42:ce:a3:76:a1:26:16:6c:bc:56:8d:dd:c5:
+        af:46:75:a0:68:dc:ed:0d:bd:4a:74:05:cd:ea:9e:1c:3e:dd:
+        70:d1:24:de:ea:31:54:19:ee:c0:74:cb:5a:ff:29:38:16:c7:
+        5e:60:6d:bf:50:55:75:81:8c:6f:c3:b2:b4:b7:4d:d9:83:8a:
+        02:5b:91:0d:02:18:fa:b4:d0:c5:99:97:e2:38:c2:bd:b2:62:
+        67:8a:6a:0f:52:8f:f3:2d:62:41:51:ba:f3:39:8c:88:b8:82:
+        7e:d6:d8:a6:b7:50:d6:ab:d9:fc:f8:10:fb:c2:6a:4f:34:ab:
+        19:43:1d:aa:7a:79:ed:d1:9e:4e:96:f0:2b:a6:5b:1f:45:36:
+        23:b2:29:70:9f:a3:a7:f7:a4:85:0f:07:a5:2c:ef:c5:a6:11:
+        2f:30:b3:89
 -----BEGIN CERTIFICATE-----
-MIIDYzCCAkugAwIBAgIQCVClPiAPn+PEv02odG2ChzANBgkqhkiG9w0BAQsFADAT
-MREwDwYDVQQDDAhDaGFuZ2VNZTAeFw0yNjA1MTMxMTU0NTdaFw0yODA4MTUxMTU0
-NTdaMBIxEDAOBgNVBAMMB3JvdXRlcjEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
-ggEKAoIBAQD3qrOrOcUc+rv3U01qhXvN/tzCSXRd+FSDEteUnihkz0qa4pzceSQo
-N1w8CYPb3+D1wl5lTi6cgZgWMg4UQgEVMdtTaD9AV0cEXW4phG8pgX2lpvX1GVsK
-6MfG8sCsRMrUaST/0kfFoVSVrTh/chOS89Ks+Rm2F8mpYKDCMGfLURgNvOPMOK/6
-Fr7tjRaTPtQT6aK4xy3V6yknNgLWQNFgO8IXSM3r7M8cWtkX0gVoK+jxNcU32h+Y
-jM+giXRsbcK8TnXt4ZwRj+l5giGAgYi8DogxjknZos6QBLXzInEvGwXAUXP4GdxI
-1uTWAt/CbQGy14Pg3GMEqepkZ3S2C3mNAgMBAAGjgbMwgbAwCQYDVR0TBAIwADAd
-BgNVHQ4EFgQUH02cZOVEG2OD8P7XjwHIBwKhXZAwTgYDVR0jBEcwRYAUAhR+BVaI
-k4hF5lv8v6+3aiyl5jOhF6QVMBMxETAPBgNVBAMMCENoYW5nZU1lghQlH01frePu
-89+r1LzcPtM/pDtCjjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAw
-EgYDVR0RBAswCYIHcm91dGVyMTANBgkqhkiG9w0BAQsFAAOCAQEAkZKx5sa3z4VN
-U1tInPeR/sOmkgap/VLkSD1sdHk9vBR1OAf1vnAuszbPiderCRWO7aCzuU4eJ0aw
-CIZLc/211upmgPqZR+zN7FlCeATgGI877VOE+CrFjSx8ROFFB1FsM+Sflug1xBJt
-CMwTQDqBaiOhD9OqAlq54xLHvR6Q3k+7CYJD/jfKsykMz6h2uw0Y4ICP60sy88L6
-GZfAMF22HQD+eFFgKe/cBG+V8J54vA5JniHInS0B5n1vBudcCELD5VDV4gtKQ1Yc
-Q48BnglpcxhvKVtnuQEeCSdKFsq1SkHNiPHKmg75NYFg7falTXSh2K9d3UaEAylp
-OeF5VbGHEw==
+MIIDajCCAlKgAwIBAgIRAJFpuye7gNHdRWqK2TIttE8wDQYJKoZIhvcNAQELBQAw
+FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYwNTIwMTQxMzEzWhcNMjgwODIy
+MTQxMzEzWjASMRAwDgYDVQQDDAdyb3V0ZXIxMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAzjiQmSQVlb/QzAmXkM43FFQrXLVijVsf0ajxaX1ddpj9DX4f
+4CgoQDWMjkRABQ7jfjhQ8LHHSADpf6/vrj5yKL4Z0NeUf1hWZBQWggkoiQjCMOZi
+PJxZip+2B1U1qaxPSHEk4mDpyIFGi6AGlVHL3U4RfG81BX3wHe9ngeSQePfMre4R
+Rf04COeKSCzE184U9VWmGUXPjR8bFdY4ofPSEqHt7XbdFUUaET2dpvjLpDTEmWcZ
+Qg/onWJgztwCPPtqgn6hkgzdCdKC5+SqWQdHX/shiA+kmuxLdfwzeHtLzcMYyBkD
+vBAmcZPZoee2fQV2udUVsB0FBhAhJHsfRuGB+QIDAQABo4G2MIGzMAkGA1UdEwQC
+MAAwHQYDVR0OBBYEFAmDB1THXGU2X5IJSNrQhEQX8zGjMFEGA1UdIwRKMEiAFN6s
+EQzeul1rHsdu029FW2x1YQKnoRqkGDAWMRQwEgYDVQQDDAtFYXN5LVJTQSBDQYIU
+ItByOfFGJZvMey5zMI0iOIUGWswwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0P
+BAQDAgWgMBIGA1UdEQQLMAmCB3JvdXRlcjEwDQYJKoZIhvcNAQELBQADggEBAIA/
++V6PJvMOGsj05H54Peee55XwSZgxps1o1ZwhIEM4NTPxy//MAU3S2Bxp4I64DP88
+8suGCmVRyEIG3CfWLBrS/Zgl2SSyabxnEYw244rbK+qzYqp4f3FSiFQcv2o9Qs6j
+dqEmFmy8Vo3dxa9GdaBo3O0NvUp0Bc3qnhw+3XDRJN7qMVQZ7sB0y1r/KTgWx15g
+bb9QVXWBjG/DsrS3TdmDigJbkQ0CGPq00MWZl+I4wr2yYmeKag9Sj/MtYkFRuvM5
+jIi4gn7W2Ka3UNar2fz4EPvCak80qxlDHap6ee3Rnk6W8CumWx9FNiOyKXCfo6f3
+pIUPB6Us78WmES8ws4k=
 -----END CERTIFICATE-----
