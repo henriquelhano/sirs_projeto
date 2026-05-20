@@ -7,4 +7,37 @@ brctl addif br0 eth0
 brctl addif br0 eth1
 ifconfig br0 up
 
+modprobe br_netfilter
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
 
+iptables -P FORWARD DROP
+
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Regra 2: ICMP e traceroute
+iptables -A FORWARD -p icmp -j ACCEPT
+iptables -A FORWARD -p udp --dport 33434:33534 -j ACCEPT
+
+# Regra 3: HTTP para o webserver
+iptables -A FORWARD -p tcp -d 7.4.3.2 --dport 80 -j ACCEPT
+
+# Regra 5: HTTP da corporate para a Internet
+iptables -A FORWARD -p tcp -s 3.2.4.0/24 --dport 80 -j ACCEPT
+
+# VPN: OpenVPN UDP 1194
+iptables -A FORWARD -p udp --dport 1194 -j ACCEPT
+
+# Regra 8: anti-spoofing — bloquear IPs internos vindos da Internet
+iptables -A FORWARD -s 3.2.0.0/20 -i eth0 -j DROP
+iptables -A FORWARD -s 7.4.3.0/24 -i eth0 -j DROP
+
+# Regra 7: bloquear saída de Oeiras com IP de origem fora de Oeiras
+iptables -A FORWARD -o eth0 -s ! 3.2.0.0/20 -j DROP
+
+# Regra 9: bloquear .255
+iptables -A FORWARD -d 7.4.3.255 -j DROP
+iptables -A FORWARD -d 3.2.2.255 -j DROP
+iptables -A FORWARD -d 3.2.3.255 -j DROP
+iptables -A FORWARD -d 3.2.4.255 -j DROP
+iptables -A FORWARD -d 3.2.5.255 -j DROP
+iptables -A FORWARD -d 3.2.6.255 -j DROP

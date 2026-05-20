@@ -4,3 +4,34 @@ ifconfig eth2 3.2.4.254/24 up
 ifconfig eth3 3.2.5.254/24 up
 ifconfig eth4 3.2.6.254/24 up
 ip route add 0.0.0.0/0 via 3.2.2.1
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+iptables -P FORWARD DROP
+
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Regra 2: ICMP e traceroute
+iptables -A FORWARD -p icmp -j ACCEPT
+iptables -A FORWARD -p udp --dport 33434:33534 -j ACCEPT
+
+# Tráfego VPN (Ana e Bento via túnel OpenVPN)
+iptables -A FORWARD -s 10.8.0.0/24 -d 3.2.4.0/24 -j ACCEPT
+
+# Regra 4: redes isoladas → corporate apenas por SSH
+iptables -A FORWARD -p tcp -s 3.2.3.0/24 -d 3.2.4.0/24 --dport 22 -j ACCEPT
+iptables -A FORWARD -p tcp -s 3.2.5.0/24 -d 3.2.4.0/24 --dport 22 -j ACCEPT
+iptables -A FORWARD -p tcp -s 3.2.6.0/24 -d 3.2.4.0/24 --dport 22 -j ACCEPT
+
+# Regra 5: corporate → redes isoladas e cloud por SSH
+iptables -A FORWARD -p tcp -s 3.2.4.0/24 --dport 22 -j ACCEPT
+
+# Regra 5: corporate → Internet por HTTP
+iptables -A FORWARD -p tcp -s 3.2.4.0/24 --dport 80 -j ACCEPT
+
+# Regra 9: bloquear .255
+iptables -A FORWARD -d 3.2.2.255 -j DROP
+iptables -A FORWARD -d 3.2.3.255 -j DROP
+iptables -A FORWARD -d 3.2.4.255 -j DROP
+iptables -A FORWARD -d 3.2.5.255 -j DROP
+iptables -A FORWARD -d 3.2.6.255 -j DROP
