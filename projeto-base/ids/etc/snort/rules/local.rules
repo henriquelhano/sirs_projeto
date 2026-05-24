@@ -1,0 +1,8 @@
+# Regra 3: SMB (TCP/445)
+alert tcp any any -> 3.2.4.0/24 445 (msg:"ALERT FTP access attempt to corporate network"; flags:S; sid:1000003; rev:1;)
+
+# Regra 4: FTP (TCP/20)
+alert tcp any any -> 3.2.4.0/24 20 (msg:"ALERT SMB access attempt to corporate network"; flags:S; sid:1000004; rev:1;)
+
+# Regra 5: Port scan
+alert tcp any any -> 3.2.4.0/24 any (msg:"ALERT Port scan detected on corporate network"; flags:S; threshold:type threshold, track by_src, count 5, seconds 3; sid:1000005; rev:1;)

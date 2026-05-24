@@ -1,2 +1,8 @@
 ifconfig eth0 3.2.4.2/24 up
 route add default gw 3.2.4.254
+
+sed -i 's/config checksum_mode:.*/config checksum_mode: none/' /etc/snort/snort.conf
+sed -i 's|ipvar HOME_NET.*|ipvar HOME_NET 3.2.4.0/24|' /etc/snort/snort.conf
+
+mkdir -p /var/log/snort
+snort -D -i eth0 -c /etc/snort/snort.conf -l /var/log/snort
