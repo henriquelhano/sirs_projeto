@@ -27,12 +27,12 @@ iptables -A FORWARD -p tcp -s 3.2.4.0/24 --dport 80 -j ACCEPT
 # VPN: OpenVPN UDP 1194
 iptables -A FORWARD -p udp --dport 1194 -j ACCEPT
 
+# Regra 7: bloquear saída de Oeiras com IP de origem fora de Oeiras
+iptables -A FORWARD -o eth0 -s ! 3.2.0.0/20 -j DROP
+
 # Regra 8: anti-spoofing — bloquear IPs internos vindos da Internet
 iptables -A FORWARD -s 3.2.0.0/20 -i eth0 -j DROP
 iptables -A FORWARD -s 7.4.3.0/24 -i eth0 -j DROP
-
-# Regra 7: bloquear saída de Oeiras com IP de origem fora de Oeiras
-iptables -A FORWARD -o eth0 -s ! 3.2.0.0/20 -j DROP
 
 # Regra 9: bloquear .255
 iptables -A FORWARD -d 7.4.3.255 -j DROP
