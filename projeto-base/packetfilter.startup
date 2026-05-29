@@ -32,7 +32,6 @@ iptables -A FORWARD -o eth0 -s ! 3.2.0.0/20 -j DROP
 
 # Regra 8: anti-spoofing — bloquear IPs internos vindos da Internet
 iptables -A FORWARD -s 3.2.0.0/20 -i eth0 -j DROP
-iptables -A FORWARD -s 7.4.3.0/24 -i eth0 -j DROP
 
 # Regra 9: bloquear .255
 iptables -A FORWARD -d 7.4.3.255 -j DROP
