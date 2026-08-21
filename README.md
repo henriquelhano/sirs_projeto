@@ -1,6 +1,6 @@
 # SIRS Project
 
-Project developed as part of the **Network and Computer Security** course, with the goal of applying the knowledge acquired throughout the course by implementing a complete software solution.
+Project developed as part of the **Network and Computer Security** course, with the goal of applying the knowledge acquired throughout the course by implementing a complete secure network solution.
 
 ## 📋 About the Project
 
