@@ -20,5 +20,5 @@ The main objective was to put into practice the concepts and techniques covered 
 * **Bruno Madeira** — [GitHub](https://github.com/brunomadeira05)
 * **Ricardo Fonseca** — [GitHub](https://github.com/rfonsxca)
 
-* ### Final Grade
- 19/20
+## Grade
+- **19 / 20.00**
